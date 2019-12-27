@@ -1,0 +1,171 @@
+VM arguments used:
+-Xms256m
+-Xmx512m
+-XX:+UseSerialGC || -XX:+UseParallelGC || -XX:+UseConcMarkSweep || -XX:+UseG1GC
+-XX:-HeapDumpOnOutOfMemoryError
+-XX:HeapDumpPath=${workspace_loc}
+
+----------------------------------------------------------------
+
+SerialGC
+-XX:+UseSerialGC
+
+Young generation - Copy
+Old generation - MarkSweepCompact
+
+Dez 20, 2018 10:00:35 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: Copy
+Dez 20, 2018 10:00:35 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: MarkSweepCompact
+Dez 20, 2018 10:01:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 1 collection(s) took 213 ms
+Dez 20, 2018 10:01:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:02:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 1 collection(s) took 240 ms
+Dez 20, 2018 10:02:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:03:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 2 collection(s) took 496 ms
+Dez 20, 2018 10:03:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 1 collection(s) took 648 ms
+Dez 20, 2018 10:04:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:04:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:05:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 1 collection(s) took 462 ms
+Dez 20, 2018 10:05:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:06:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: Copy (GC): 1 collection(s) took 0 ms
+Dez 20, 2018 10:06:35 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: MarkSweepCompact (GC): 1 collection(s) took 1255 ms
+
+Total:
+----------------------------------------------------------------
+Young	6 collections in 1411 ms
+Old	2 collections in 1903 ms
+
+----------------------------------------------------------------
+
+ParallelGC
+-XX:+UseParallelGC
+
+Young generation - PS Scavenge
+Old generation - PS MarkSweep
+
+Dez 20, 2018 10:10:19 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: PS Scavenge
+Dez 20, 2018 10:10:19 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: PS MarkSweep
+Dez 20, 2018 10:11:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS Scavenge (GC): 1 collection(s) took 126 ms
+Dez 20, 2018 10:11:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS MarkSweep (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:12:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS Scavenge (GC): 2 collection(s) took 325 ms
+Dez 20, 2018 10:12:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS MarkSweep (GC): 1 collection(s) took 2090 ms
+Dez 20, 2018 10:13:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS Scavenge (GC): 1 collection(s) took 227 ms
+Dez 20, 2018 10:13:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS MarkSweep (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:14:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS Scavenge (GC): 2 collection(s) took 558 ms
+Dez 20, 2018 10:14:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS MarkSweep (GC): 2 collection(s) took 6169 ms
+Dez 20, 2018 10:15:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS Scavenge (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:15:19 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: PS MarkSweep (GC): 1 collection(s) took 2783 ms
+
+Total:
+----------------------------------------------------------------
+Young	6 collections in 1236 ms
+Old	4 collections in 11042 ms
+
+----------------------------------------------------------------
+
+ConcurrentMarkSweep
+-XX:+UseConcMarkSweepGC
+
+Young generation - ParNew
+Old generation - ConcurrentMarkSweep
+
+Dez 20, 2018 10:16:44 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: ParNew
+Dez 20, 2018 10:16:44 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: ConcurrentMarkSweep
+Dez 20, 2018 10:17:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ParNew (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:17:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ConcurrentMarkSweep (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:18:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ParNew (GC): 1 collection(s) took 1809 ms
+Dez 20, 2018 10:18:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ConcurrentMarkSweep (GC): 5 collection(s) took 27846 ms
+Dez 20, 2018 10:19:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ParNew (GC): 1 collection(s) took 627 ms
+Dez 20, 2018 10:19:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ConcurrentMarkSweep (GC): 8 collection(s) took 44967 ms
+Dez 20, 2018 10:20:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ParNew (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:20:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ConcurrentMarkSweep (GC): 14 collection(s) took 32870 ms
+Dez 20, 2018 10:21:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ParNew (GC): 1 collection(s) took 0 ms
+Dez 20, 2018 10:21:44 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: ConcurrentMarkSweep (GC): 21 collection(s) took 21856 ms
+
+Total:
+----------------------------------------------------------------
+Young	3 collections in 2436 ms
+Old	48 collections in 127539 ms
+
+----------------------------------------------------------------
+
+G1
+-XX:+UseG1GC
+
+Young generation - G1 Young Generation
+Old generation - G1 Old Generation
+
+Dez 20, 2018 10:23:25 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: G1 Young Generation
+Dez 20, 2018 10:23:25 PM ru.otus.l041.GCMonitor init
+INFORMATION: Listening to: G1 Old Generation
+Dez 20, 2018 10:24:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 5 collection(s) took 257 ms
+Dez 20, 2018 10:24:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:25:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 4 collection(s) took 395 ms
+Dez 20, 2018 10:25:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:26:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 5 collection(s) took 312 ms
+Dez 20, 2018 10:26:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:27:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 5 collection(s) took 318 ms
+Dez 20, 2018 10:27:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:28:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 5 collection(s) took 357 ms
+Dez 20, 2018 10:28:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 0 collection(s) took 0 ms
+Dez 20, 2018 10:29:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Young Generation (GC): 6 collection(s) took 1970 ms
+Dez 20, 2018 10:29:25 PM ru.otus.l041.GCMonitor$3 run
+INFORMATION: G1 Old Generation (GC): 1 collection(s) took 2172 ms
+
+Total:
+----------------------------------------------------------------
+Young	31 collections in 3609 ms
+Old	1 collections in 2172 ms
+
+----------------------------------------------------------------
+Conclusions:
+
+Serial GC and G1 GC perform best for this particular task in this particular environment (available memory, number of processors, etc)
